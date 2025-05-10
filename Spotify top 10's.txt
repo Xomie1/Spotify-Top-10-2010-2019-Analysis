@@ -1,0 +1,30 @@
+So I'm here again with yet another data analysis project to work on, I'm working on Spotify's top 10's from 2010-2019, now let's get to it
+I'm working on excel first.
+1. I used Proper on the column headers because they were in lowercase which isn't good.
+2. Checked for duplicates; easiest way to do it is to go to the data tab, highlight the whole data and click on remove duplicates
+3. handled missing values, using conditional formatting to highlight blank fields then formatting the data
+
+Now I'm done with Excel, I'm off to load the cleaned csv file on python to perform EDA (Explanatory Data Analysis)
+How do you load?, using "pd.read_csv("")"
+1. I also checked missing values in python using ".isnull().sum()" to check the missing values then summing them all up together.
+2. I used .duplicated().sum() to check all duplicates then .drop_duplicates() to remove duplicates
+
+On to visualizations
+Questions:
+1. What is the distribution of song durations?
+-What do I notice?
+-80+ songs have a duration of 220-230 seconds
+-Very few songs are below 150 seconds and 350+ seconds
+this means that chart high tend to have a "radio-friendly" standard length!
+2. Which genre appears most?
+-what do I notice?
+Most common genre is Dance pop and the least common is neo mellow, this is a top 10 list of the genres.
+- Dance pop is leading the tally by a massive gap with over 300 songs in its belts, followed by pop with over 50 songs and the rest with less than 50 songs
+3. Energy vs Popularity?
+From what I've noticed, it's clear that dance pop which is represented with the green dot is most listened to. There's heavy congestion in energy and popularity between 60 and 80. There's no visible trend to suggest an upward or downward trend
+4. Danceability vs Popularity?
+Most songs likely cluster between danceability 60–80 and popularity 60–80 — showing that popular songs tend to have a fairly high danceability, though again not an absolute rule.
+5. Popular songs by Year?
+
+I learnt that scatterplot are used to visualize the relationship between numerica variables.
+
